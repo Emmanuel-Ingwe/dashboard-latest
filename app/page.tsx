@@ -33,7 +33,7 @@ export default function Page() {
             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
+        <div className="flex-wrap md:flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
           <Image
             src="/hero-desktop.png"
@@ -41,6 +41,13 @@ export default function Page() {
             height={760}
             className="hidden md:block"
             alt="dshboard desktop version"
+          />
+          <Image
+            src="/hero-mobile.png"
+            width={560}
+            height={500}
+            className="md:hidden"
+            alt="dshboard mobile version"
           />
         </div>
       </div>
