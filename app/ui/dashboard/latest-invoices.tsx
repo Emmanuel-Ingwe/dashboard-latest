@@ -41,7 +41,7 @@ export default async function LatestInvoices({
                     <p className="truncate text-sm font-semibold md:text-base">
                       {invoice.name}
                     </p>
-                    <p className="hidden text-sm text-gray-500 sm:block">
+                    <p className="hidden text-sm text-gray-500 sm:block ">
                       {invoice.email}
                     </p>
                   </div>
