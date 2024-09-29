@@ -42,6 +42,16 @@ export async function updateInvoice(id: string, formData: FormData) {
 
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
 
+
+export type State = {
+  errors?: {
+    customerId?: string[];
+    amount?: string[];
+    status?: string[];
+  };
+  message?: string | null;
+};
+
 export async function createInvoice(formData: FormData) {
   const { customerId, amount, status } = CreateInvoice.parse({
     customerId: formData.get('customerId'),
@@ -75,4 +85,6 @@ export async function deleteInvoice(id: string) {
   } catch (error) {
     return { message: 'Database Error: Failed to Delete Invoice.' };
   }
+
 }
+
